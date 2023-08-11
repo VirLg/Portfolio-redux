@@ -7,7 +7,6 @@ export const App = () => {
   return (
     <div
       style={{
-        height: '100vh',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
@@ -16,7 +15,7 @@ export const App = () => {
       }}
     >
       <Routes>
-        <Route path="/" element={Layout}>
+        <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
           <Route path="todo" element={<ToDo />} />
         </Route>
