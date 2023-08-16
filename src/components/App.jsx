@@ -2,6 +2,7 @@ import HomePage from 'pages/HomePage';
 import ToDo from 'pages/ToDo';
 import { Route, Routes } from 'react-router-dom';
 import Layout from './layout/Layout';
+import Movie from 'pages/Movie';
 
 export const App = () => {
   return (
@@ -18,6 +19,7 @@ export const App = () => {
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
           <Route path="todo" element={<ToDo />} />
+          <Route path="movie" element={<Movie />} />
         </Route>
       </Routes>
     </div>
