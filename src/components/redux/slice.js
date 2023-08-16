@@ -1,10 +1,10 @@
 const { createSlice } = require("@reduxjs/toolkit");
 
-const movieSlice = createSlice({
+export const movieSlice =  createSlice({
     name:'movie',
     initialState:[],
     reducers:{
-        getMovie:(state,action)=>state
+        getMovie:(state,action)=>[...state]
     }
 })
 export const {getMovie}=movieSlice.actions;
