@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 const HomePageItem = ({ prop }) => {
   const location = useLocation();
-  return prop.map(({ id, title }) => {
+  return (prop&&prop.map(({ id, title }) => {
     return (
       <li key={id}>
         <Link to={`movies/${id}`} state={location}>
@@ -9,6 +9,6 @@ const HomePageItem = ({ prop }) => {
         </Link>
       </li>
     );
-  });
+  }))
 };
 export default HomePageItem;
