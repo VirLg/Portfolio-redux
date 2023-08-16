@@ -1,21 +1,8 @@
-const { createSlice } = require("@reduxjs/toolkit");
-const { action } = require("./action");
-
-// export const movieSlice =  createSlice({
-//     name:'movie',
-//     initialState:[],
-//     reducers:{
-//         getMovie:(state,action)=>[...state]
-//     }
-// })
-// export const {getMovie}=movieSlice.actions;
-// export default movieSlice.reducer;
-
+import { createSlice } from "@reduxjs/toolkit"
 const initialState = {
     isLoading:false,
     movie:[],
-    error:'',
-  
+    error:''   
 }
 
 export const allMovieSlice = createSlice({
@@ -36,3 +23,15 @@ export const allMovieSlice = createSlice({
 })
 export const{fetching,fetchSuccess,fetchError}=allMovieSlice.actions
 export default allMovieSlice.reducer
+
+
+
+    // export const movieSlice =  createSlice({
+    //     name:'movie',
+    //     initialState:[],
+    //     reducers:{
+    //         getMovie:(state,action)=>[...state]
+    //     }
+    // })
+    // export const {getMovie}=movieSlice.actions;
+    // export default movieSlice.reducer;
