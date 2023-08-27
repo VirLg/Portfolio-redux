@@ -3,6 +3,7 @@ import ToDo from 'pages/ToDo';
 import { Route, Routes } from 'react-router-dom';
 import Layout from './layout/Layout';
 import Movie from 'pages/Movie';
+import Users from 'pages/Users';
 
 export const App = () => {
   return (
@@ -20,6 +21,7 @@ export const App = () => {
           <Route index element={<HomePage />} />
           <Route path="todo" element={<ToDo />} />
           <Route path="movie" element={<Movie />} />
+          <Route path="users" element={ <Users/>}/>
         </Route>
       </Routes>
     </div>

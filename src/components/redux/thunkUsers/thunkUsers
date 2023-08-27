@@ -1,0 +1,5 @@
+import { createAsyncThunk } from "@reduxjs/toolkit";
+import { ApiUsers} from  '../../../api/ApiUsers'
+export const thunkUsers = createAsyncThunk('users/get',()=> {
+    return ApiUsers()
+})
