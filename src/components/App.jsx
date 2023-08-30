@@ -4,6 +4,8 @@ import { Route, Routes } from 'react-router-dom';
 import Layout from './layout/Layout';
 import Movie from 'pages/Movie';
 import Users from 'pages/Users';
+import LoginPage from 'pages/LoginPage';
+import SignUpPage from 'pages/SignUpPage';
 
 export const App = () => {
   return (
@@ -23,6 +25,8 @@ export const App = () => {
           <Route path="movie" element={<Movie />} />
           <Route path="users" element={ <Users/>}/>
         </Route>
+        <Route path='/login' element={<LoginPage/>}/>
+        <Route path='/signUp' element={<SignUpPage/>}/>
       </Routes>
     </div>
   );
