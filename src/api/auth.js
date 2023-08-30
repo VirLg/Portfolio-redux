@@ -8,7 +8,7 @@ export const signUp = async body => {
 
 export const logIn = async body => {
   console.log(body);
-  const data = await instance.post('auth/login', body);
+  const { data } = await instance.post('auth/login', body);
   console.log(data);
   return data;
 };

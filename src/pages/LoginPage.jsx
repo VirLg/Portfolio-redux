@@ -1,10 +1,13 @@
 import { logIn } from 'api/auth';
+import { thunkLogin } from 'components/redux/auth/thunk';
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const dispath = useDispatch();
   const handleChange = e => {
     e.target.name === 'email'
       ? setEmail(e.target.value)
@@ -12,11 +15,12 @@ const LoginPage = () => {
   };
   const handleSubmit = e => {
     e.preventDefault();
-    console.log(e);
-    const data = logIn({
-      email,
-      password,
-    });
+    dispath(
+      thunkLogin({
+        email,
+        password,
+      })
+    );
   };
   return (
     <div
