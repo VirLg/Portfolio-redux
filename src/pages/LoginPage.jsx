@@ -10,10 +10,16 @@ const LoginPage = () => {
 }
     const handleSubmit =(e)=>{
 e.preventDefault()
+console.log(e);
     }
-  return (
-    <form onSubmit={handleSubmit}>
+  return (<div style={{
+    display:'flex',
+    flexDirection:'column'
+  }}> Login 
+   <form onSubmit={handleSubmit}>
+       
         <label>
+            Email
             <input 
             type="text" 
             name='email'
@@ -22,6 +28,7 @@ e.preventDefault()
             />
         </label>
         <label>
+            Password
             <input type="text" 
             name='password'
             onChange={handleChange}
@@ -31,6 +38,8 @@ e.preventDefault()
         <button type='submit'>Login</button>
         <Link to="/signUp">SignUp</Link>
     </form>
+  </div>
+   
   )
 }
 
