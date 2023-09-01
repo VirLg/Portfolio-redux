@@ -1,4 +1,3 @@
-import { logIn } from 'api/auth';
 import { thunkLogin } from 'components/redux/auth/thunk';
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
