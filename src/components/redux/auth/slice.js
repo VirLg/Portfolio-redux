@@ -20,11 +20,19 @@ const handlePending = state => {
 };
 const handleRejected = (state, { error, payload }) => {
   state.isLoading = false;
-  state.error = error ? error.message : payload;
+  state.error = payload ?? error.message;
 };
 const authSlice = createSlice({
   name: 'auth',
   initialState,
+  reducers: {
+    logOut: state => {
+      state.access_token = '';
+      state.isLoading = false;
+      state.error = '';
+      state.profile = null;
+    },
+  },
   extraReducers: builder => {
     builder
       .addCase(thunkLogin.fulfilled, handleFulfilled)
@@ -34,3 +42,4 @@ const authSlice = createSlice({
   },
 });
 export const authReducer = authSlice.reducer;
+export const { logOut } = authSlice.actions;

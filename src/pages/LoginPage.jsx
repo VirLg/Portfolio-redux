@@ -1,12 +1,15 @@
 import { thunkLogin } from 'components/redux/auth/thunk';
-import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { selectorIsAuth } from 'components/redux/selector';
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link, useNavigate } from 'react-router-dom';
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const dispath = useDispatch();
+  const isAuth = useSelector(selectorIsAuth);
+  const navigate = useNavigate();
   const handleChange = e => {
     e.target.name === 'email'
       ? setEmail(e.target.value)
@@ -21,6 +24,10 @@ const LoginPage = () => {
       })
     );
   };
+  useEffect(() => {
+    isAuth && navigate('/');
+    isAuth && alert('Welcome');
+  }, [isAuth, navigate]);
   return (
     <div
       style={{
