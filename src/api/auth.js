@@ -13,3 +13,7 @@ export const logIn = async body => {
   if ('access_token' in data) setToken(`Bearer ${data.access_token}`);
   return data;
 };
+export const getProfile = async () => {
+  const { data } = await instance('auth/profile');
+  return data;
+};

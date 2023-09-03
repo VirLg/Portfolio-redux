@@ -28,7 +28,6 @@ const LoginPage = () => {
         flexDirection: 'column',
       }}
     >
-      {' '}
       Login
       <form onSubmit={handleSubmit}>
         <label>
