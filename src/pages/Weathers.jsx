@@ -1,11 +1,13 @@
-import { getApiWether } from 'api/apiWether';
+import { weatherThunk } from 'components/redux/weather/weatherThunk';
 import React from 'react';
 import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 
 const Weathers = city => {
+  const dispath = useDispatch();
   useEffect(() => {
-    getApiWether(city);
-  }, [city]);
+    dispath(weatherThunk('lviv'));
+  }, [city, dispath]);
   return <div>Weathers</div>;
 };
 

@@ -1,9 +1,10 @@
-import { wetherThunk } from './weatherThunk';
+import { weatherThunk } from './weatherThunk';
 
 const { createSlice } = require('@reduxjs/toolkit');
 
 const handleGetFulfilled = (state, action) => {
   state.isLoading = false;
+  console.log('action.payload', action.payload);
 };
 
 const handlePending = state => {
@@ -19,7 +20,7 @@ const weatherSlice = createSlice({
   initialState: { weaterAll: null, isLoading: false, error: '' },
   extraReducers: builder => {
     builder
-      .addCase(wetherThunk.fulfilled, handleGetFulfilled)
+      .addCase(weatherThunk.fulfilled, handleGetFulfilled)
 
       .addMatcher(({ type }) => type.endsWith('/pending'), handlePending)
       .addMatcher(({ type }) => type.endsWith('/rejected'), handleRejected);

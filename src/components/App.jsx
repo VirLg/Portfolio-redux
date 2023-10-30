@@ -24,11 +24,11 @@ export const App = () => {
           <Route index element={<HomePage />} />
           <Route path="todo" element={<ToDo />} />
           <Route path="movie" element={<Movie />} />
-          <Route path="users" element={ <Users/>}/>
-          <Route path="weather" element={ <Weathers/>}/>
+          <Route path="users" element={<Users />} />
+          <Route path="weather" element={<Weathers />} />
         </Route>
-        <Route path='/login' element={<LoginPage/>}/>
-        <Route path='/signUp' element={<SignUpPage/>}/>
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/signUp" element={<SignUpPage />} />
       </Routes>
     </div>
   );
