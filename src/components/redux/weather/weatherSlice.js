@@ -4,7 +4,7 @@ const { createSlice } = require('@reduxjs/toolkit');
 
 const handleGetFulfilled = (state, action) => {
   state.isLoading = false;
-  console.log('action.payload', action.payload);
+  state.weaterAll = action.payload;
 };
 
 const handlePending = state => {
