@@ -8,6 +8,5 @@ export const getApiWether = async props => {
     `/forecast.json?key=${WEATHERAPI_KEY}&q=${props}`
   );
   if (!data) return new Error('some');
-  console.log('data', data);
   return data;
 };
