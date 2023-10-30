@@ -1,5 +1,4 @@
-import { delToken } from 'api/auth';
-import { logOut } from 'components/redux/auth/slice';
+import { logOut } from 'components/redux/auth/sliceUsers';
 import { authProfile, selectorIsAuth } from 'components/redux/selector';
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';

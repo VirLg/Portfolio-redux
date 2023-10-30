@@ -9,6 +9,8 @@ const ToDoForm = ({ formSubmit }) => {
   const handleSubmit = e => {
     e.preventDefault();
     formSubmit({ name, task });
+    setName('');
+    setTask('');
   };
   return (
     <form onSubmit={handleSubmit}>

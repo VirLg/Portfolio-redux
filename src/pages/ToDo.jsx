@@ -1,4 +1,4 @@
-import ToDoForm from 'components/toDo/ToDoForm';
+import ToDoForm from 'components/redux/toDo/ToDoForm';
 import React from 'react';
 
 const ToDo = () => {

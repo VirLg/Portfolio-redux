@@ -1,4 +1,4 @@
-import { signUp } from 'api/auth';
+import { signUp } from 'api/ApiAuthUsers';
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 

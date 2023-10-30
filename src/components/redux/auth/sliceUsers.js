@@ -1,5 +1,6 @@
-const { createSlice } = require('@reduxjs/toolkit');
-const { thunkLogin, getProfileThunk } = require('./thunk');
+import { createSlice } from '@reduxjs/toolkit';
+import { getProfileThunk, thunkLogin } from './thunkUsers';
+
 const initialState = {
   access_token: '',
   isLoading: false,

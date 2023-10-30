@@ -12,9 +12,9 @@ const setToken = token => {
 //   delete instance.defaults.headers.common['Authorization'];
 // };
 export const logIn = async body => {
-  const { data } = await instance.post('auth/login', body);
-  if ('access_token' in data) setToken(`Bearer ${data.access_token}`);
-  return data;
+  // const { data } = await instance.post('auth/login', body);
+  // if ('access_token' in data) setToken(`Bearer ${data.access_token}`);
+  // return data;
 };
 export const getProfile = async () => {
   const { data } = await instance('auth/profile');

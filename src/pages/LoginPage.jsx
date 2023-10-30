@@ -1,4 +1,4 @@
-import { thunkLogin } from 'components/redux/auth/thunk';
+import { thunkLogin } from 'components/redux/auth/thunkUsers';
 import { selectorIsAuth } from 'components/redux/selector';
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';

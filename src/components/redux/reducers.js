@@ -1,8 +1,8 @@
-import { authReducer } from './auth/slice';
-import { allMovieSlice } from './slice';
+// import { authReducer } from './auth/slice';
+import { allMovieSlice } from './movies/slice';
 export const reducer = {
   allMovie: allMovieSlice.reducer,
-  auth: authReducer,
+  // auth: authReducer.reducer,
 };
 
 //===========================================
