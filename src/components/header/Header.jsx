@@ -18,6 +18,7 @@ const Header = () => {
       <NavLink to="/">Home Page</NavLink>
       <NavLink to="todo">ToDo</NavLink>
       <NavLink to="movie">Movie</NavLink>
+      <NavLink to="weather">Weather</NavLink>
       <NavLink to="users">Users</NavLink>
       <button
         onClick={() => {

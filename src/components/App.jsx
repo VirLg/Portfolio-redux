@@ -6,6 +6,7 @@ import Movie from 'pages/Movie';
 import Users from 'pages/Users';
 import LoginPage from 'pages/LoginPage';
 import SignUpPage from 'pages/SignUpPage';
+import Weathers from 'pages/Weathers';
 
 export const App = () => {
   return (
@@ -24,6 +25,7 @@ export const App = () => {
           <Route path="todo" element={<ToDo />} />
           <Route path="movie" element={<Movie />} />
           <Route path="users" element={ <Users/>}/>
+          <Route path="weather" element={ <Weathers/>}/>
         </Route>
         <Route path='/login' element={<LoginPage/>}/>
         <Route path='/signUp' element={<SignUpPage/>}/>
