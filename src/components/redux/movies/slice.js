@@ -5,7 +5,7 @@ const initialState = {
   error: '',
 };
 
-export const allMovieSlice = createSlice({
+const allMovieSlice = createSlice({
   name: 'allMovie',
   initialState,
   reducers: {
@@ -24,7 +24,7 @@ export const allMovieSlice = createSlice({
   },
 });
 export const { fetching, fetchSuccess, fetchError } = allMovieSlice.actions;
-export default allMovieSlice.reducer;
+export const allMovieReducer = allMovieSlice.reducer;
 
 // export const movieSlice =  createSlice({
 //     name:'movie',
